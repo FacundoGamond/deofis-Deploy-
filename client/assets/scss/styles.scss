@@ -1,0 +1,368 @@
+//General Styles
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Helvetica, sans-serif, Arial;
+}
+
+.clearfix {
+    clear: both;
+    float: none;
+}
+
+//Fonts
+@font-face {
+    font-family: "Web-Symbols";
+    src: url(../fonts/WebSymbols-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Breezi";
+    src: url(../fonts/breezi_font-webfont.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+//Styles
+body {
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.164),
+            rgba(0, 0, 0, 0.5)), url(../images/background.jpg);*/
+
+    background-color: #eee;
+}
+
+#header {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(218, 165, 32, 0.966);
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.164),
+                rgba(0, 0, 0, 0.5)), url(../images/ofert-color.jpg);*/
+    background-size: 100%;
+    margin: 0px auto;
+    border-bottom: 4px solid #ccc;
+    top: 0px;
+    z-index: 98;
+
+    #logo {
+        display: block;
+        width: 20%;
+        float: left;
+        padding-left: 2%;
+        cursor: pointer;
+
+        span {
+            display: block;
+            float: left;
+            width: 50px;
+            height: 50px;
+            background-color: goldenrod;
+            font-size: 35px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            border-radius: 999px;
+            font-family: "Breezi";
+            margin-top: 9px;
+            border: 1px solid white;
+            animation-name: latir;
+            /*Elijo el keyframe*/
+            animation-duration: 2s;
+            /*Elijo la duracion*/
+            animation-iteration-count: infinite;
+            /*Elijo si quiero que sea finita o infinita*/
+            animation-timing-function: ease;
+            /*Cambiamos como se mueve (la curva de movimiento)*/
+        }
+
+        @keyframes latir {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.03);
+                background-color: rgb(185, 148, 53);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        #brand {
+            display: block;
+            float: left;
+            color: white;
+            margin-left: 2%;
+            line-height: 70px;
+        }
+    }
+
+    #menu {
+        display: block;
+        float: left;
+        line-height: 70px;
+        width: 20%;
+
+        ul {
+            li {
+                display: inline-block;
+                text-align: center;
+                width: 33%;
+                color: white;
+
+                span {
+                    display: block;
+                    cursor: pointer;
+                    transition: 300ms all;
+                }
+
+                span:hover {
+                    transform: scale(1.05);
+
+                }
+            }
+        }
+    }
+
+    #browser {
+        display: block;
+        width: 40%;
+        float: left;
+        line-height: 70px;
+        margin-left: 2%;
+
+        input[type="text"] {
+            display: block;
+            margin-top: 15px;
+            float: left;
+            width: 80%;
+            height: 40px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0px 0px 5px;
+            padding-left: 2%;
+            border-left: none;
+        }
+
+        input[type="text"]:hover {
+            border: 1px solid grey;
+            border-left: none;
+        }
+
+        input[type="text"]:focus {
+            box-shadow: 0px 0px 5px #ccc inset;
+        }
+
+        input[type="submit"] {
+            display: block;
+            float: left;
+            width: 20%;
+            color: rgb(122, 122, 122);
+            height: 42px;
+            width: 40px;
+            margin-top: 15px;
+            background-color: #eee;
+            font-family: "Web-Symbols";
+            font-size: 20px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 0px 5px 5px 0px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+    }
+
+    #user {
+        display: block;
+        float: left;
+        width: 10%;
+        margin-left: 5%;
+
+        span {
+            display: block;
+            float: left;
+            width: 30%;
+            text-align: center;
+            font-family: "Breezi";
+            color: white;
+            line-height: 70px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    }
+}
+
+#slider {
+    display: block;
+    margin-top: 72px;
+    height: 400px;
+
+    carousel {
+        z-index: 5;
+    }
+}
+
+#title-destacados {
+    display: block;
+    width: 80%;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #444;
+    font-size: 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+#center {
+    display: block;
+    width: 95%;
+    margin: 0px auto;
+    margin-left: 5%;
+
+    #sidebar {
+        display: block;
+        float: left;
+        width: 18%;
+        background-color: white;
+        min-height: 200px;
+        border-radius: 10px;
+
+        h3 {
+            background-color: goldenrod;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            border-radius: 10px 10px 0px 0px;
+            border-bottom: 2px solid #ccc;
+        }
+
+        select {
+            display: block;
+            width: 80%;
+            margin: 0px auto;
+            margin-top: 20px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            height: 40px;
+            font-size: 15px;
+            color: #444;
+            padding-left: 5px;
+            padding-bottom: -20px;
+        }
+
+        #marca{
+            width: 95%;
+            margin: 0px auto;
+            margin-top: 20px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 999px;
+            background-color: goldenrod;
+            text-align: center;
+            color: white;
+        }
+    }
+
+    #products {
+        display: block;
+        float: right;
+        width: 80%;
+        min-height: 1000px;
+
+        article {
+            display: block;
+            float: left;
+            margin-left: 2%;
+            margin-bottom: 20px;
+            transition: 300ms all;
+
+            #ofert-product {
+                display: block;
+                width: 290px;
+                height: 40px;
+                border-radius: 20px 20px 0px 0px;
+                background-color: orangered;
+                color: white;
+                line-height: 40px;
+                text-align: center;
+                animation-name: colorOferta;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes colorOferta {
+                0% {
+                    background-color: orangered;
+                }
+
+                50% {
+                    background-color: rgb(255, 112, 60);
+                }
+
+                100% {
+                    background-color: orangered;
+                }
+            }
+
+            #product {
+                display: block;
+                width: 270px;
+                height: 350px;
+                background-color: white;
+                padding: 10px;
+                border-radius: 0px 0px 20px 20px;
+                box-shadow: 0px 0px 5px #ccc;
+                color: #444;
+
+                img {
+                    display: block;
+                    width: 250px;
+                    margin: 0px auto;
+                    border-radius: 20px;
+                }
+
+                h4 {
+                    display: block;
+                    width: 90%;
+                    margin: 0px auto;
+                    text-align: center;
+                    margin-top: 10px;
+                    border-bottom: 1px solid #ccc;
+                }
+
+                p {
+                    display: block;
+                    margin-top: 20px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+
+            }
+        }
+
+        article:hover{
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+    }
+}
+
+#footer{
+    display: block;
+    height: 60px;
+    background-color: #444;
+    color: white;
+    line-height: 60px;
+    text-align: center;
+
+}
